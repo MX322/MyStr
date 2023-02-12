@@ -181,3 +181,32 @@ int  MyStr::MyStrCmp(MyStr& obj)
 	}
 }
 
+
+char* MyStr::GetStr()
+{
+	return this->str;
+}
+
+
+char& MyStr::operator[](const int index)
+{
+	return str[index];
+}
+
+int MyStr::operator()(const char index)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (str[i] == index)
+		{
+			return i;
+		}
+	}
+
+	return -1;
+}
+
+MyStr::operator int()
+{
+	return --size;
+}

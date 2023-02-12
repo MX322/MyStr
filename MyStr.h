@@ -24,8 +24,12 @@ public:
 	void MyDelChr(char c); // удаляет указанный символ 
 	int MyStrCmp(MyStr& obj); // сравнение строк ( -1  первая строка меньше чем вторая   |   1   первая больше чем вторая   |   0   строки равны!)
 	
-		
+	char* GetStr();
 
+
+	char& operator[](const int index);
+	int operator()(const char index);
+	operator int();
 
 };
 
